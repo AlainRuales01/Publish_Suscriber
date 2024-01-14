@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="kafka_process_seq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log level="full"/>
+    <log level="custom">
+        <property expression="get-property('partitionNo')" name="partitionNo" xmlns:ns="http://org.apache.synapse/xsd"/>
+    </log>
+    <log level="custom">
+        <property expression="get-property('messageValue')" name="messageValue" xmlns:ns="http://org.apache.synapse/xsd"/>
+    </log>
+    <log level="custom">
+        <property expression="get-property('offset')" name="offset" xmlns:ns="http://org.apache.synapse/xsd"/>
+    </log>
+</sequence>
